@@ -106,35 +106,3 @@ class ParkingLot {
 }
 
 module.exports = ParkingLot;
-  enter(licensePlateNumber) {}
-
-  /**
-   * As a car leaves the parking lot, or the queue, the leave method is called with the license plate number of the car leaving.
-   * @param licensePlateNumber
-   *    *  the license plate number of the car leaving.
-   */
-  leave(licensePlateNumber) {}
-
-  /**
-   * Lists each space in the parking lot along with the license plate number of the car parked there, or
-   * "vacant" as the license plate if the spot is vacant.
-   * @returns {{licensePlateNumber: string, space: Number}[]}
-   */
-  get occupants() {
-    return this.spaces.map((licensePlateNumber, index) => ({
-      space: index + 1,
-      licensePlateNumber,
-    }));
-  }
-
-  /**
-   * The total cumulative revenue for the parking lot. The parking rate is paid when the car leaves, it does not matter how long the car stays in the spot.
-   * @returns {number}
-   *  the total revenue for the parking lot.
-   */
-  get totalRevenue() {
-    return this.revenue;
-  }
-}
-
-module.exports = ParkingLot;
